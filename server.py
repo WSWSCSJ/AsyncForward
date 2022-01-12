@@ -15,7 +15,6 @@ class AsyncServer:
         self.remote_host = remote_address[0]
         self.remote_port = remote_address[1]
         self.running = False
-        self._server = None
 
     async def forward(self, reader, writer):
         local_connection = (reader, writer)
