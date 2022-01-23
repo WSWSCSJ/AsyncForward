@@ -15,3 +15,7 @@ docker build ./ -t async_forward
 # 将容器35000端口流量转发至同一docker网络下redis容器的6379端口
 docker run -it --name async-forward -p 35000:5000 async_forward '172.17.0.1:6379'
 ```
+
+### TODO
+- [ ] 日志持久化
+- [ ] web数据查看
