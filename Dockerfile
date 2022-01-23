@@ -19,5 +19,5 @@ RUN apk add --no-cache --virtual=.build_dependencies python3-dev musl-dev libeve
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
     pip3 install -r ./requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple --no-cache-dir
 
-ENTRYPOINT ["python run.py --local 0.0.0.0:5000 "]
-CMD ["--remote 172.17.0.1:6379"]
+ENTRYPOINT ["python", "./run.py", "--local", "0.0.0.0:5000", "--remote"]
+CMD ["172.17.0.1:6379"]

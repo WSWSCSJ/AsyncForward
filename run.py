@@ -6,7 +6,7 @@ from logger import set_logger
 
 
 @click.command()
-@click.option("--local")
+@click.option("--local", default="0.0.0.0:5000")
 @click.option("--remote")
 @click.option("--level", default="DEBUG")
 @click.option("--log_file", default="AsyncForward.log")
